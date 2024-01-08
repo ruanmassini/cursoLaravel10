@@ -11,6 +11,8 @@
     <title>Gestao</title>
 
     @yield('styles')
+
+
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 
@@ -153,9 +155,15 @@
     </div>
 
     @yield('scripts')
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="{{ asset('js\bootstrap.bundle.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js"></script>
     <script src="{{ asset('js\dashboard.js') }}"></script>
+
+    {{-- blockUI loading --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/livs/jquery.blockUI/2.70/jquery.blockUI.js"></script>
+
 </body>
 
 </html>
