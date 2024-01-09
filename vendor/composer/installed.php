@@ -989,6 +989,15 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
+        'spatie/laravel-route-attributes' => array(
+            'pretty_version' => '1.20.1',
+            'version' => '1.20.1.0',
+            'reference' => '57e62a71abd97e531b23cec9ef4e5444e9ba1ae1',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../spatie/laravel-route-attributes',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
         'symfony/console' => array(
             'pretty_version' => 'v6.4.1',
             'version' => '6.4.1.0',

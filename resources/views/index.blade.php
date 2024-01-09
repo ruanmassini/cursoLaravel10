@@ -2,7 +2,6 @@
 <html lang="en" data-bs-theme="auto">
 
 <head>
-    <script src="/docs/5.3/assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,12 +16,12 @@
     <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="{{ asset('icons/apple-touch-icon.png') }}" sizes="180x180">
-    <link rel="icon" href="{{ asset('icons/faviconx32.png') }}" sizes="32x32" type="image/png">
-    <link rel="icon" href="{{ asset('icons/faviconx16.png') }}" sizes="16x16" type="image/png">
-    <link rel="manifest" href="{{ asset('icons/manifest.json') }}">
-    <link rel="mask-icon" href="{{ asset('icons/safari-pinned-tab.svg') }}" color="#712cf9">
-    <link rel="icon" href="{{ asset('icons/favicon.ico') }}">
+    {{-- <link rel="apple-touch-icon" href="{{ asset('public\icons\apple-touch-icon.png') }}" sizes="180x180">
+    <link rel="icon" href="{{ asset('public\icons\faviconx32.png') }}" sizes="32x32" type="image/png">
+    <link rel="icon" href="{{ asset('public\icons\faviconx16.png') }}" sizes="16x16" type="image/png">
+    <link rel="manifest" href="{{ asset('public\icons\manifest.json') }}">
+    <link rel="mask-icon" href="{{ asset('public\icons\safari-pinned-tab.svg') }}" color="#712cf9">
+    <link rel="icon" href="{{ asset('public\icons\favicon.ico') }}"> --}}
     <meta name="theme-color" content="#712cf9">
 
 
@@ -112,7 +111,7 @@
 
 <body>
     <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">GESTAO</a>
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="{{ route('homepage') }}">GESTAO</a>
 
         <ul class="navbar-nav flex-row d-md-none">
             <li class="nav-item text-nowrap">
@@ -156,13 +155,15 @@
 
     @yield('scripts')
 
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="{{ asset('js\bootstrap.bundle.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js"></script>
     <script src="{{ asset('js\dashboard.js') }}"></script>
 
     {{-- blockUI loading --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/livs/jquery.blockUI/2.70/jquery.blockUI.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.js"></script>
+
+    <script src="{{ asset('js\project.js') }}"></script>
 
 </body>
 

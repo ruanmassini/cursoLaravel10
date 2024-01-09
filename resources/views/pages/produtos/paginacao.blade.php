@@ -11,7 +11,7 @@
 
             <input type="text" name="search" placeholder="Digite sua pesquisa">
             <button>Pesquisar</button>
-            <a type="button" href="" class="btn btn-success float-end">Incluir Produto</a>
+            <a type="button" href="{{ route('productCreate') }}" class="btn btn-success float-end">Adicionar Produto</a>
 
         </form>
 
@@ -33,8 +33,12 @@
                                 <td>{{ $product->nome }}</td>
                                 <td>{{ 'R$' . ' ' . number_format($product->valor, 2, ',', '.') }}</td>
                                 <td>
-                                    <a href="" class="btn btn-light btn-sm">Editar</a>
-                                    <a href="{{ route('productDelete') }}" class="btn btn-danger btn-sm">Excluir</a>
+                                    <a class="btn btn-light btn-sm">Editar</a>
+
+                                    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
+                                    <a onclick="deleteProductPg('{{ route('productDelete') }}' , {{ $product->id }})"
+                                        class="btn btn-danger btn-sm">Excluir</a>
                                 </td>
                             </tr>
                         @endforeach

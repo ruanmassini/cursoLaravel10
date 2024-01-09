@@ -17,5 +17,21 @@ class productsSeeder extends Seeder
             'nome' => 'Caixas Dágua',
             'valor' => '15.99'
         ]);
+        Product::create([
+            'nome' => 'Cimento',
+            'valor' => '50.99'
+        ]);
+        Product::create([
+            'nome' => 'Carrinho de mão',
+            'valor' => '80.00'
+        ]);
+        Product::create([
+            'nome' => 'Maçaneta',
+            'valor' => '20.00'
+        ]);
+        Product::create([
+            'nome' => 'Maçavó',
+            'valor' => '10.00'
+        ]);
     }
 }
